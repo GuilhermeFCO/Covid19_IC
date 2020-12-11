@@ -1,0 +1,79 @@
+# Introdução
+
+Na década de 60 o virologista britânico David Tyrrell realizava pesquisas sobre 
+a gripe comum que tinha como objeto de estudo lavagens nasais de voluntários, 
+este estudo gerou um artigo [@tyrrell1965cultivation]. A equipe de Tyrrell 
+também estudava diferentes vírus humanos e animais, entre eles havia um vírus 
+da hepatite de camundongo, vírus da bronquite infecciosa, vírus da 
+gastroenterite transmitidos por suíno, como outros.
+
+Certo dia juntamente com a equipe que liderava, Tyrrell recebeu uma amostra de 
+um paciente doente de um internato de Surray, sul de Londres. Essa amostra foi 
+testada em mais de 20 experimentos à procura de revelar uma doença já conhecida 
+como, influenza A, B ou C, pars-influenza 1, 2, 3 ou 4, vírus sincicial 
+respiratório, mas nenhum foi encontrado. Assim sendo, eles descobriram um novo 
+patógeno, que provocava os sintomas de uma gripe comum, entretanto fracassaram 
+em cultivá-lo em cultura celular de rotina para o prosseguimento dos estudos. 
+No entanto, de acordo com uma reportagem da BBC[@almeidaBBC], os estudos 
+obtiveram importantes avanços após a virologista escocesa June Almeida, se 
+juntar à equipe de Tyrrel para fazer parte da unidade de pesquisa do resfriado 
+comum, após ser convidada a trabalhar na escola de medicina do hospital St. 
+Thomas. Convite esse motivado após o mundo da medicina reconhecer seu trabalho
+que permitia visualizar melhor os vírus por meio do uso de anticorpos. 
+Utilizando sua metodologia de visualização, June foi a primeira a conseguir 
+visualizar esta amostra do patógeno, na qual observou que parecia com outras já 
+vistas anteriormente ao longo de sua carreira. June juntamente com Tyrrell e 
+Anthony Peter Waterson, diretor do hospital, denominaram esse patógeno,
+posteriormente confirmado como vírus, de B814. Dessa forma foi encontrado um 
+novo gênero de vírus denominado corona, onde este nome denotava a aparência 
+semelhante a uma coroa da superfície na estrutura morfológica dos vírus, sendo
+possível obervar na imagem \@ref(fig:coroa).
+
+<div class="imageCenter">
+```{r coroa, echo=FALSE, out.width='40%', fig.align='center', fig.cap='Imagem retirada do artigo [@holmes1999coronaviruses'}
+knitr::include_graphics("img/coroa.jpg")
+```
+</div>
+
+Na mesma época existiam outros pesquisadores estudando doenças respiratórias 
+similares, entre eles Dorothy Hamre e John J Procknow, que analisaram amostras 
+obtidas de estudantes de medicina com resfriado e relataram um tipo semelhante 
+de vírus que denominaram de 229E [@hamre1966new]. Outro pesquisador, o doutor 
+Kenneth McIntosh estava pesquisando sobre assuntos similares e conseguiu isolar 
+agentes sensíveis ao éter de outra amostra do sistema respiratório humano, e por
+serem cultivados em cultura de órgãos foram denominados de "OC" 
+[@mcintosh1967recovery]. Outros estudos feitos por McIntosh com técnicas 
+sorológicas avançadas foi obtido como resultado novas informações sobre os 
+surtos dos coronavírus, por exemplo, ocorrem mais em estações chuvosas, inverno 
+e primavera do que no verão [@mcintosh1970seroepidemiologic]. Entre os
+diferentes vírus da família corona os que mais extensivamente estudadas foram
+o 229E e o OC43.
+
+Após varios estudos epidemológicos de diferentes autores, citados no artigo
+[@jahangir2020coronavirus], os coronavírus foram descobertos associados a
+outras doenças ja conhecidas pelos médicos, a maioria delas doenças 
+respiratórias como bronquite crônica, asma em adultos e idosos sendo a mais
+predominante pneumonia em crianças e jovens adultos. Como já dito antes os
+coronavírus não infectavam apenas humanos mas também animais, com a velocidade
+e a quantidade que esses casos apareciam em diversas espécies, camundongos, 
+ratos, gatos, cães, perus, galinhas, porcos e coelhos os estudos não se 
+limitaram apenas o sistema respiratório, mas também, a encefalite, hepatite e
+gastroenterite. Com base em estudos tanto genéticos e antigênicos, foi possível
+categorizar os coronavírus tanto humanos quanto animais em 3 grandes divisões,
+podendo ser observada na tabela [@tab:corona3div], retirada do artigo
+[@jahangir2020coronavirus].
+
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Categoria} & \textbf{Coronavírus}\\ \hline
+        Grupo I ($\alpha$-CoVs) & 229E e outros vírus semelhantes. \\ \hline
+        Grupo II ($\beta$-CoVs) & OC43 \\ \hline
+        Grupo III ($\gamma$-CoVs) & Vírus da bronquite infecciosa aviária e\\ outros vírus aviários relacionados. \\
+        \hline
+    \end{tabular}
+    \caption{Tabela retirada e traduzida do artigo [@jahangir2020coronavirus]}
+    \label{tab:corona3div}
+\end{table}

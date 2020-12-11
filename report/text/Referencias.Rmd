@@ -1,0 +1,8 @@
+`r if (knitr::is_html_output()){ '
+# Referências {-}
+<div id="refs"></div>
+'}`
+
+\nocite{*}
+
+
