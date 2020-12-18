@@ -5,8 +5,8 @@ library(tidyverse)
 library(rgdal)
 library(raster)
 
-source("data/Brasil_io.R")
-source("data/MapsIbge.R")
+source("data/brasil_io.R")
+source("data/mapsIbge.R")
 source("data/idhAtlas.R")
 
 covid <- data.table::fread("data/dataCovidBR.csv", encoding = "UTF-8")
