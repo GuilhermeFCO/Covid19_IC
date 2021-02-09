@@ -6,8 +6,8 @@ library(rgdal)
 library(raster)
 
 source("data/brasil_io.R")
-source("data/mapsIbge.R")
 source("data/idhAtlas.R")
+# source("data/latLongIbge.R")
 
 covid <- data.table::fread("data/dataCovidBR.csv", encoding = "UTF-8")
 munAtlas <- readxl::read_xlsx("data/Atlas.xlsx", sheet = 2)
@@ -31,35 +31,6 @@ names(munIDH2010)[6] <- "ANO_IDH"
 mun_uf_IDH2010 <- dplyr::bind_rows(munIDH2010, ufIDH10)
 
 covidIDH <- merge(covid, mun_uf_IDH2010)
-
-
-shpUF <- rgdal::readOGR("data/maps/UF", 
-                        "BR_UF_2019",
-                        stringsAsFactors = FALSE,
-                        encoding = "UTF-8")
-shpUF@data$CD_UF <- as.numeric(shpUF@data$CD_UF)
-Encoding(shpUF@data$NM_UF) <- "UTF-8"
-names(shpUF@data)[1] <- "city_ibge_code"
-names(shpUF@data)[2] <- "Name"
-proj4string(shpUF) <- CRS("+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs'")
-
-
-shpMUN <- rgdal::readOGR("data/maps/MUN",
-                         "BR_Municipios_2019",
-                         stringsAsFactors = FALSE,
-                         encoding = "UTF-8")
-shpMUN@data$CD_MUN <- as.numeric(shpMUN@data$CD_MUN)
-Encoding(shpMUN@data$NM_MUN) <- "UTF-8"
-names(shpMUN@data)[1] <- "city_ibge_code"
-names(shpMUN@data)[2] <- "Name"
-proj4string(shpMUN) <- CRS("+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs'")
-
-
-
-shpBR <- raster::bind(shpMUN, shpUF)
-
-covid_IDH_IBGE <- merge(shpBR, 
-                        covidIDH %>% filter(is_last == "TRUE"))
 
 
 cityCovidIDH_Last <- covidIDH %>% 
