@@ -1,5 +1,6 @@
 library(tidyverse)
 library(stats)
+library(plotly)
 #------------------------------------------------------------------------------#
 source("data/merge.R")
 #------------------------------------------------------------------------------#
@@ -9,14 +10,16 @@ source("data/merge.R")
 teste <- covid_IDH_Maps %>% 
     dplyr::filter(place_type == "city", state == "MG")
 
-ggplot(data = teste) +
-    geom_sf(data = teste, aes(fill=corr, geometry = geom), color= NA, size=.15) +
+p <- ggplot(data = teste) +
+    geom_sf(data = teste, aes(fill=IDHM, geometry = geom), color= NA, size=.15) +
     labs(title="IDH dos Municipíos de MG") +
     scale_fill_distiller(palette = "Reds",
                          direction = 1,
-                         limits=c(min(teste$corr),max(teste$corr)),
+                         limits=c(min(teste$IDHM),max(teste$IDHM)),
                          name="IDH")  +
     theme_void()
+ggplotly(p)
+
 
 #==============================================================================#
 
