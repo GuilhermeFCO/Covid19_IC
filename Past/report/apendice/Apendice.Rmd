@@ -1,0 +1,14 @@
+---
+output: latex_fragment
+---
+
+
+# (APPENDIX) Appendix {-} 
+
+# Primeiro Apêndice
+
+Este é so um exemplo de Apêndice.
+
+# Segundo Apêndice
+
+Este é so mais um exemplo de Apêndice.

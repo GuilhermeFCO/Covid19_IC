@@ -11,9 +11,17 @@ regionStates <- states
 
 i <- NULL
 j <- NULL
-covidIDH_last$code_region_state <- 0
+covidIDH_last$code_region_state <- "0"
 covidIDH_last$name_region_state <- "A"
-for (i in 1:nrow(covidIDH_last))
+for (i in 1:nrow(covidIDH_last)) {
+    for (j in 1:nrow(regionStates)) {
+        if (covidIDH_last$state[i] == regionStates$abbrev_state[j]) {
+            covidIDH_last$code_region_state[i] <- regionStates$code_region[j]
+            covidIDH_last$name_region_state[i] <- regionStates$name_region[j]
+            break
+        }
+    }
+}
 
 cityIDH_last <- merge.data.frame(covidIDH_last, muni)
 cityIDH_last$place_type <- NULL
@@ -149,4 +157,4 @@ cities <- merge.data.frame(cityIDH_last, cities)
 
 # ---------------------------------------------------------------------------- #
 
-rm(df, i, j)
+rm(df, i, j, covidIDH_last)

@@ -1,5 +1,0 @@
-remotes::install_github('rstudio/rmarkdown')
-install.packages('knitr')
-install.packages('tinytex')
-installed.packages('devtools')
-remotes::install_github('rstudio/bookdown')
