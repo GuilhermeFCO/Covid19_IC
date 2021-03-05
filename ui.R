@@ -1,4 +1,6 @@
-ui <- navbarPage("Covid-19 no Brasil",
+ui <- fluidPage(
+    includeCSS("styles/style.css"),
+    navbarPage("Covid-19 no Brasil",
     tabPanel("Descrição",
         
     ),
@@ -22,7 +24,44 @@ ui <- navbarPage("Covid-19 no Brasil",
                             )
                         ),
                         column(2,
-                            tags$h1("TESTE")
+                            tags$div(
+                                tags$div(id = "box1",
+                                    tags$div(id = "boxTitle",
+                                             "Confirmados"
+                                    ),
+                                    tags$br(),
+                                    tags$div(id = "numberBox",
+                                             "9 567 998"
+                                    )
+                                ),
+                                tags$div(id = "box1",
+                                         tags$div(id = "boxTitle",
+                                                  "Confirmados"
+                                         ),
+                                         tags$br(),
+                                         tags$div(id = "numberBox",
+                                                  "9 567 998"
+                                         )
+                                ),
+                                tags$div(id = "box1",
+                                         tags$div(id = "boxTitle",
+                                                  "Confirmados"
+                                         ),
+                                         tags$br(),
+                                         tags$div(id = "numberBox",
+                                                  "9 567 998"
+                                         )
+                                ),
+                                tags$div(id = "box1",
+                                         tags$div(id = "boxTitle",
+                                                  "Confirmados"
+                                         ),
+                                         tags$br(),
+                                         tags$div(id = "numberBox",
+                                                  "9 567 998"
+                                         )
+                                )
+                            )
                         )
                     )
                 )
@@ -40,16 +79,16 @@ ui <- navbarPage("Covid-19 no Brasil",
                 fluidPage(
                     fluidRow(
                         column(10,
-                               tabsetPanel(
-                                   tabPanel("Regiões"),
-                                   tabPanel("Estados"),
-                                   tabPanel("Cidades"),
-                                   tabPanel("Mesorregiões"),
-                                   tabPanel("Microrregiões")
-                               )
+                            tabsetPanel(
+                                tabPanel("Regiões"),
+                                tabPanel("Estados"),
+                                tabPanel("Cidades"),
+                                tabPanel("Mesorregiões"),
+                                tabPanel("Microrregiões")
+                            )
                         ),
                         column(2,
-                               tags$h1("TESTE")
+                            tags$h1("TESTE")
                         )
                     )
                 )
@@ -67,19 +106,20 @@ ui <- navbarPage("Covid-19 no Brasil",
                 fluidPage(
                     fluidRow(
                         column(10,
-                               tabsetPanel(
-                                   tabPanel("Estados"),
-                                   tabPanel("Cidades"),
-                                   tabPanel("Mesorregiões"),
-                                   tabPanel("Microrregiões")
-                               )
+                            tabsetPanel(
+                                tabPanel("Estados"),
+                                tabPanel("Cidades"),
+                                tabPanel("Mesorregiões"),
+                                tabPanel("Microrregiões")
+                            )
                         ),
                         column(2,
-                               tags$h1("TESTE")
+                            tags$h1("TESTE")
                         )
                     )
                 )
             )
         )
     )
+)
 )

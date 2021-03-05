@@ -11,4 +11,5 @@ for(i in 1:length(l)){
         f <- "y"
     }
 }
-if (f == "n") source("data/merge.R")
+if (f == "n") 
+    source("data/merge.R")
