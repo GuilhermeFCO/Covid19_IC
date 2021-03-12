@@ -54,6 +54,9 @@ covidIDHState <- dplyr::inner_join(covidIDHState, dfCitylast, by = "state")
 
 rm("dfCitylast")
 
+# ============================================================================ #
+
+############### FAZER AQUI O PREENCHIMENTO DE DATAS FALTANDO !!! ###############
 
 # ---------------------------------------------------------------------------- #
 
