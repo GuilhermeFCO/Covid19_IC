@@ -19,11 +19,19 @@ navbarPage("Covid-19 no Brasil",
                     ),
                     radioButtons(
                         inputId = "confirOrDeathBrasil",
-                        label = "",
+                        label = "Teste",
                         choices = c("Confirmados",
                                     "Mortes"),
                         inline = TRUE
                     )
+                    # selectInput(
+                    #     inputId = "confirOrDeathBrasil",
+                    #     label = "",
+                    #     choices = c("Confirmados",
+                    #                 "Mortes"),
+                    #     selected = "Confirmados",
+                    #     selectize = TRUE
+                    # )
                 ),
                 conditionalPanel(condition = "input.tabselectedCovid == 1",
                                  h1("TESTE1")
@@ -58,13 +66,13 @@ navbarPage("Covid-19 no Brasil",
                                          column(5,
                                              plotly::plotlyOutput(
                                                  outputId = "graBrasil0",
-                                                 width = 300
+                                                 width = 500
                                              )
                                          ),
                                          column(5,
                                              plotly::plotlyOutput(
                                                  outputId = "graBrasil1",
-                                                 width = 300
+                                                 width = 500
                                              )
                                          )
                                      )
@@ -106,20 +114,27 @@ navbarPage("Covid-19 no Brasil",
                                 ),
                                 tags$div(id = "box1",
                                          tags$div(id = "boxTitle",
-                                                  "Confirmados"
+                                                  "Numero de Mortes Total"
                                          ),
                                          tags$br(),
                                          tags$div(id = "numberBox",
-                                                  "9 567 998"
+                                                  textOutput(
+                                                      outputId = "covidDeaths"
+                                                  )
                                          )
                                 ),
                                 tags$div(id = "box1",
                                          tags$div(id = "boxTitle",
-                                                  "Confirmados"
+                                                  "Numero de mortes na data",
+                                                  textOutput(
+                                                      outputId = "covidDateDeathsPerDay"
+                                                  )
                                          ),
                                          tags$br(),
                                          tags$div(id = "numberBox",
-                                                  "9 567 998"
+                                                  textOutput(
+                                                      outputId = "covidDeathsPerDay"
+                                                  )
                                          )
                                 )
                             )
