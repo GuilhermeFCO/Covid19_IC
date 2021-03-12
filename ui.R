@@ -10,16 +10,20 @@ navbarPage("Covid-19 no Brasil",
             sidebarPanel(
                 conditionalPanel(condition = "input.tabselectedCovid == 0",
                     selectInput(
-                        inputId = "divBrasil",
+                        inputId = "divisaoBrasil",
                         label = "Divisão por:",
                         choices = c("Regiões",
-                                    "Estados",
-                                    "Cidades",
-                                    "Mesorregiões",
-                                    "Microrregiões"),
-                        selected = "Regiões",
+                                    "Estados"),
+                        selected = "Estados",
                         selectize = TRUE
-                    )                    
+                    ),
+                    radioButtons(
+                        inputId = "confirOrDeathBrasil",
+                        label = "",
+                        choices = c("Confirmados",
+                                    "Mortes"),
+                        inline = TRUE
+                    )
                 ),
                 conditionalPanel(condition = "input.tabselectedCovid == 1",
                                  h1("TESTE1")
@@ -53,12 +57,14 @@ navbarPage("Covid-19 no Brasil",
                                      fluidRow(
                                          column(5,
                                              plotly::plotlyOutput(
-                                                 outputId = "graBrasil0"
+                                                 outputId = "graBrasil0",
+                                                 width = 300
                                              )
                                          ),
                                          column(5,
                                              plotly::plotlyOutput(
-                                                 outputId = "graBrasil1"
+                                                 outputId = "graBrasil1",
+                                                 width = 300
                                              )
                                          )
                                      )
@@ -74,20 +80,28 @@ navbarPage("Covid-19 no Brasil",
                             tags$div(
                                 tags$div(id = "box1",
                                     tags$div(id = "boxTitle",
-                                             "Confirmados"
+                                             "Numero de Confirmados Total"
                                     ),
                                     tags$br(),
                                     tags$div(id = "numberBox",
-                                             "9 567 998"
+                                             textOutput(
+                                                 outputId = "covidConfirmed"
+                                             )
                                     )
                                 ),
                                 tags$div(id = "box1",
                                          tags$div(id = "boxTitle",
-                                                  "Confirmados"
+                                                  "Número de casos confirmados na data ",
+                                                  textOutput(
+                                                      outputId = "covidDateConfirmedPerDay"
+                                                  )
+                                                  
                                          ),
                                          tags$br(),
                                          tags$div(id = "numberBox",
-                                                  "9 567 998"
+                                                  textOutput(
+                                                      outputId = "covidConfirmedPerDay"
+                                                  )
                                          )
                                 ),
                                 tags$div(id = "box1",
