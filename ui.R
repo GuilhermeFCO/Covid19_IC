@@ -19,19 +19,11 @@ navbarPage("Covid-19 no Brasil",
                     ),
                     radioButtons(
                         inputId = "confirOrDeathBrasil",
-                        label = "Teste",
+                        label = "",
                         choices = c("Confirmados",
                                     "Mortes"),
                         inline = TRUE
                     )
-                    # selectInput(
-                    #     inputId = "confirOrDeathBrasil",
-                    #     label = "",
-                    #     choices = c("Confirmados",
-                    #                 "Mortes"),
-                    #     selected = "Confirmados",
-                    #     selectize = TRUE
-                    # )
                 ),
                 conditionalPanel(condition = "input.tabselectedCovid == 1",
                                  h1("TESTE1")
