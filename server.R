@@ -6,12 +6,6 @@ server <- function(input, output, sesion) {
             dataBrasil <- regionStates
         } else if (input$divBrasil == "Estados") {
             dataBrasil <- states
-        } else if (input$divBrasil == "Cidades") {
-            dataBrasil <- cities
-        } else if (input$divBrasil == "Mesorregiões") {
-            dataBrasil <- meso
-        } else if (input$divBrasil == "Microrregiões") {
-            dataBrasil <- micro
         }
         
         dataBrasil %>% 
